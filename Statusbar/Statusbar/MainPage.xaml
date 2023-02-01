@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Statusbar.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="general"
+                   TargetType="Button">
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout VerticalOptions="FillAndExpand"
+                 Padding="20, 100, 20, 0"
+                 BackgroundColor="#FFDE54">
+        <Label Text="Statusbar" 
+               FontSize="50"/>
+        <Button Text="Transparente" Command="{Binding TransparenteCommand}" 
+                Style="{StaticResource general}"
+                Background="#E4B8E4"/>
+        <Button Text="Ocultar" Command="{Binding OcultarCommand}" 
+                Style="{StaticResource general}"
+                Background="#5ADF77"/>
+        <Button Text="Mostrar" Command="{Binding MostrarCommand}" 
+                Style="{StaticResource general}"
+                Background="#FFC086"/>
+        <Button Text="Traslucido" Command="{Binding TraslucidoCommand}" 
+                Style="{StaticResource general}"
+                Background="#F261bf"/>
+        <Button Text="Cambiarcolor" Command="{Binding CambiarcolorCommand}" 
+                Style="{StaticResource general}"
+                Background="#FFF288"/>
+    </StackLayout>
+
+</ContentPage>
